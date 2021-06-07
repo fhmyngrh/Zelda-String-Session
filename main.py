@@ -26,11 +26,12 @@ tutor = """
 """
 
 template = """
+
 STRING_SESSION :
 <code>{}</code>
 
-⚠️ <b>Jangan Memberikan Kode Ini Kepada Siapapun</b>
-🤖 <b>Powered By @oppaidaisukii</>"""
+ <b>Jangan Memberikan Kode Ini Kepada Siapapun</b>
+ <b>Powered By @oppaidaisukii</>"""
 
 
 print(docs)
@@ -46,7 +47,7 @@ while select != ("p", "t"):
 
         with TelegramClient(StringSession(), API_KEY, API_HASH) as client:
             session_string = client.session.save()
-            saved_messages_template = "**Telethon Session**\n" + template.format(session_string)
+            saved_messages_template = "Telethon Session" + template.format(session_string)
             print("\nMemproses String Session...\n")
             client.send_message("me", saved_messages_template, parse_mode="html")
             time.sleep(1)
@@ -61,7 +62,7 @@ while select != ("p", "t"):
         "UserBot", 
         api_id=int(input("Enter API ID: ")),
         api_hash=input("Enter API HASH: ")) as pyrogram:
-            saved_messages_template = "**Pyrogram Session**\n" + template.format(session_string)
+            saved_messages_template = "Pyrogram Session" + template.format(pyrogram.export_session_string())
             print("\nMemproses String Session...\n")
             pyrogram.send_message("me", saved_messages_template, parse_mode="html")
             time.sleep(1) 
