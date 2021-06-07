@@ -30,8 +30,8 @@ template = """
 STRING_SESSION :
 <code>{}</code>
 
- <b>Jangan Memberikan Kode Ini Kepada Siapapun</b>
- <b>Powered By @oppaidaisukii</>"""
+⛔ <b>Jangan Memberikan Kode Ini Kepada Siapapun</b>
+🤖 <b>Powered By @oppaidaisukii</b>"""
 
 
 print(docs)
